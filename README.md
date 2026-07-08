@@ -1,16 +1,35 @@
-# Project XYZ
+# Wildlife Charity Giving Analytics
 
-**Project XYZ** is a comprehensive data analysis tool designed to streamline data exploration, analysis, and visualisation. The tool supports multiple data formats and provides an intuitive interface for both novice and expert data scientists.
+This project explores ...
 
 # ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 ## Dataset Content
 
-* Describe your dataset. Choose a dataset of reasonable size to avoid exceeding the repository's 100GB limit.
+* The dataset I have chosen is [Animal Charity: Wildlife Conservation Donations](https://www.kaggle.com/datasets/jaderz/synthetic-animal-charity-donations) - a public domain dataset sourced from Kaggle. 
+* It is a **synthetic dataset** that includes 10,000 records that represent donations made to a fictional wildlife conservation charity. 
+* The data simulates donation behaviour and includes the following columns:
+
+|**Column Name**| **Description**|
+|---------------|----------------|
+|`donor_id`| Unique Donor ID linked to an individual donor to the charity|
+|`age_group`| Age of the donor in age brackets|
+|`gender`| Donor's gender|
+|`name`| Donor's full name (synthetic)|
+|`email`| Donor's email address (synthetic)|
+|`country`| Donor's country of residence|
+|`donation_type`| Monthly or one-off gift|
+|`donation_amount`| Donation amount|
+|`donation_date`| Donation date (2023-2025)|
+|`payment_method`| What method of payment was used|
+|`newsletter_opt_in`| Whether the donor agreed to receive email newsletters from the charity|
+|`referral_channel`| How the donor found the charity|
+|`sector`| The donor's professional sector|
+|`campaign`| The charity's fundraising campaign the donor gave to|
 
 ## Business Requirements
 
-* Describe your business requirements
+* In the context of this synthetic data, this analysis will serve to support the wildlife conservation charity to know their donors better and understand how they give. This ensures that their fundraising activity can be more targeted and ultimately lead to better ROI on future fundraising activity.
 
 ## Hypothesis and how to validate?
 
@@ -33,19 +52,12 @@
 * Did the data limit you, and did you use an alternative approach to meet these challenges?
 * How did you use generative AI tools to help with ideation, design thinking and code optimisation?
 
-## Ethical considerations (optional)
+## Ethical considerations
 
-* Feel free to delete this section if this is a data visualisation only (unit 1 or 2) project submission.
-* Were there any data privacy, bias or fairness issues with the data?
-* How did you overcome any legal or societal issues?
-
-## Dashboard Design (optional)
-
-* Feel free to delete this section if this is a data visualisation only (unit 1 or 2) project submission.
-* List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other item that your dashboard library supports.
-* Later, during project development, you may revisit your dashboard plan to update a feature (for example, at the beginning of the project, you were confident you would use a given plot to display an insight, but later you used another plot type).
-* How were data insights communicated to technical and non-technical audiences?
-* Explain how the dashboard was designed to communicate complex data insights to different audiences. 
+* This data, whilst synthetic, contains **PII (Personally Identifiable Information)**.
+* In our course, we have not yet learned about ethical considerations when working with data, or what is best practice when it comes to dealing with PII in raw datasets.
+* However, I wanted the opportunity to practice new skills (for instance, learning about **salting** and **hashing**) and to deliver anonymised donor IDs for this project.
+* In this project, I will treat this sensitive data as though not synthetic and implement best practices when handling it (to the best of my ability at this stage of the course).
 
 ## Unfixed Bugs
 
@@ -57,24 +69,6 @@
 
 * What challenges did you face, and what strategies were used to overcome these challenges?
 * What new skills or tools do you plan to learn next based on your project experience? 
-
-## Deployment (optional)
-
-* If this is a Unit 3 Streamlit, Power BI or Tableau Public project, then you can include a link here and explain how you hosted the dashboard.
-
-### Heroku (optional)
-
-* This section is necessary only if you are deploying a Streamlit app to Heroku as part of your submission for units 2 and 3. 
-* The App live link is: https://YOUR_APP_NAME.herokuapp.com/ 
-* Set the `.python-version` Python version to a [Heroku-22](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
-* The project was deployed to Heroku using the following steps.
-
-1. Log in to Heroku and create an App
-2. From the Deploy tab, select GitHub as the deployment method.
-3. Select your repository name and click Search. Once it is found, click Connect.
-4. Select the branch you want to deploy, then click Deploy Branch.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click the button Open App at the top of the page to access your App.
-6. If the slug size is too large, then add large files not required for the app to the `.slugignore` file.
 
 ## Main Data Analysis Libraries
 
