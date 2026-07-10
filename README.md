@@ -67,7 +67,7 @@ This is where the practice of data analytics is so valuable: supporting charitie
 ## The rationale to map the business requirements to the Data Visualisations
 
 |**Business Requirement**| **Data Visualisations** | **Rationale**|
-|---|------|
+|---|------|---|
 |**Donation Amount by Age Group**| Plotly boxplot, Seaborn|The boxplot showed the distribution and the median values per age group, the bar plot very easily demonstrates which age group had the highest mean value donation amount|
 |**Monthly Donation Patterns**| Matplotlib line graph |Good tool when analysing trends over a continuous period of time|
 |**Payment Method by Country**| Seaborn heatmap | Easy to spot when combinations are the most common|
