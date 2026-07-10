@@ -1,6 +1,8 @@
 # Wildlife Charity Giving Analytics
 
-This project explores ...
+According to the Charities Aid Foundation's [UK Giving Report 2026](https://www.cafonline.org/insights/research/uk-giving-report), there are six million fewer charity donors in the UK than there were a decade ago. Factors including a rising cost of living have meant that 1 in 5 people say they cannot afford to give to charity and we have seen the first fall in annual total giving since 2021 and the COVID-19 pandemic (£15.4 billion in 2024 down to £14 billion in 2025).
+
+This is where the practice of data analytics is so valuable: supporting charities who might have limited fundraising resources (e.g. time, budget, staff capactiy) to make evidence-based fundraising decisions to increase their income. With charities being unable to solely depend on "force-of-habit" gift giving, they are required to work even harder to earn the trust and goodwill of potential donors and ensure that they engage effectively with their longstanding supporters. 
 
 # ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
@@ -31,19 +33,45 @@ This project explores ...
 
 * In the context of this synthetic data, this analysis will serve to support the wildlife conservation charity to know their donors better and understand how they give. This ensures that their fundraising activity can be more targeted and ultimately lead to better ROI on future fundraising activity.
 
+|**Business Requirement**|*(Related Hypothesis)*|Description
+|---|------|
+|**Donation Amount by Age Group**| *(H1)* | Understand which donor segments (by age) generate the most value|
+|**Monthly Donation Patterns**| *(H2)*| Identify patterns in donation volume to support campaign planning|
+|**Payment Method by Country**| *(H3)*| Ensure payment processing setup serves donors effectively while also being efficient|
+
 ## Hypothesis and how to validate?
 
-* List here your project hypothesis(es) and how you envision validating it (them) 
+* The hypotheses that will be examined are as follows: 
+
+|**Hypothesis**| **Description**|
+|--------------|----------------|
+|**H1**| Donors aged 50 - 65 give more per transaction than other age brackets |
+|**H2**| The highest number of donations in the year will come in December |
+| **H3**| Donors from the USA are more likely to donate with Cheques|
+
+* They will be validated as follows:
+
+|**Hypothesis**| **How to Validate**|
+|--------------|----------------|
+|**H1**| Plotly boxplot and Seaborn barplot to show median and mean donation values per donor age group|
+|**H2**| Matplotlib line plot showing the trend of the number of donations per month |
+|**H3**| Seaborn heatmap to analyse the relationship between country and payment method|
 
 ## Project Plan
 
-* Outline the high-level steps taken for the analysis.
-* How was the data managed throughout the collection, processing, analysis and interpretation steps?
-* Why did you choose the research methodologies you used?
+* This project was divided into three separate sections: **Stage 1 - Anonymise**, **Stage 2 - ETL**, **Stage 3 - Visualisation**
+* **Stage 1 - Anonymise**: The raw dataset was downloaded from Kaggle and saved as a CSV in a .gitignore folder. This data was then anonymised to ensure removal of all PII before the anonymised version was saved to the folder `datasets/anonymised-raw-data`. The anonymised dataset can be viewed in the repository for this project.
+* **Stage 2 - ETL**: The data was inspected to ensure no duplicates or incorrect datatypes. Necessary cleaning was completed alongside some exploratory data analysis, before a cleaned version of the dataset was saved to the folder `datasets/cleaned-data`. This, too, can be viewed in the repository for this project.
+* **Stage 3 - Visualisation**: Three hypotheses were analysed using data visualisation techniques to explore the hypotheses, ultimately supporting or disproving them.
 
 ## The rationale to map the business requirements to the Data Visualisations
 
-* List your business requirements and a rationale for mapping them to the Data Visualisations
+|**Business Requirement**| **Data Visualisations** | **Rationale**|
+|---|------|
+|**Donation Amount by Age Group**| Plotly boxplot, Seaborn|The boxplot showed the distribution and the median values per age group, the bar plot very easily demonstrates which age group had the highest mean value donation amount|
+|**Monthly Donation Patterns**| Matplotlib line graph |Good tool when analysing trends over a continuous period of time|
+|**Payment Method by Country**| Seaborn heatmap | Easy to spot when combinations are the most common|
+
 
 ## Analysis techniques used
 
@@ -59,39 +87,55 @@ This project explores ...
 * However, I wanted the opportunity to practice new skills (for instance, learning about **salting** and **hashing**) and to deliver anonymised donor IDs for this project.
 * In this project, I will treat this sensitive data as though not synthetic and implement best practices when handling it (to the best of my ability at this stage of the course).
 
-## Unfixed Bugs
-
-* Please list any unfixed bugs and explain why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable to consider, paucity of time and difficulty understanding implementation are not valid reasons to leave bugs unfixed.
-* Did you recognise gaps in your knowledge, and how did you address them?
-* If applicable, include evidence of feedback received (from peers or instructors) and how it improved your approach or understanding.
-
 ## Development Roadmap
 
-* What challenges did you face, and what strategies were used to overcome these challenges?
-* What new skills or tools do you plan to learn next based on your project experience? 
+* I identified some clear areas that I am looking forward to improving on as the course continues:
+    * Data Anonymising - I look forward to learning best practice when it comes to handling sensitive PII data.
+    * Selecting the appropriate visualisation - with more practice, I hope to be able to better identify which visualisation will be best for a specific analysis.
 
 ## Main Data Analysis Libraries
 
-* Here you should list the libraries you used in the project and provide an example(s) of how you used these libraries.
+* The main data analysis libraries used were:
+    * pandas
+    * numpy
+    * matplotlib
+    * seaborn
+    * plotly.express
+    * hashlib
+    * python-dotenv
+    * feature_engine.encoding
+    * sklearn.pipeline
+    * os
 
 ## Credits
 
-* In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials; however, it is important to be very specific about these sources to avoid plagiarism. 
-* You can break the credits section into Content and Media, depending on what you include in your project. 
+* In all sections, I have included Markdown cells entitled *"Toubleshoot Issues"* and *"Notes on Process"*: in cases where I have used blogposts/ articles, official documentation or generative AI to support me in troublshooting issues or in asissting me to complete a process I might not have seen before, I have also included references to this within the notebooks themselves in these cells.
 
-### Content 
+### Section 1 - Anonymise
+* This section required a lot of research on my part to discover how best to anonymise data, given that we had not yet learned about this in our course.
+* The sources I used for assistance in this section:
+    * Medium.com - [Pandas Move Column to Front](https://medium.com/@amit25173/pandas-move-column-to-front-3-simple-steps-to-organize-your-dataframe-99bf1f2d39aa)
+    * Medium.com - [Anonymise Sensitive Data in a Pandas DataFrame Column with hashlib](https://medium.com/data-science/anonymise-sensitive-data-in-a-pandas-dataframe-column-with-hashlib-8e7ef397d91f)
+    * Medium.com - [Create my project structure](https://saurabh-sawhney.medium.com/create-my-project-structure-please-aa8ed9b98c7f) - This gave me the correct characters to use (**│**, **├──**, and **└──**) to be able to correctly outline my folder structure and to ask generative AI tools where the .env should be placed in my project.
+* I also used Claude (Sonnet 5, Anthropic) generative AI to assist in the structure of my project - particularly in the context of the creation of a `.env` file and where that should sit in the folder/file hierarchy.
+* I used **Microsoft Copilot's inline suggestions** to support me in writing the lines of code with `os.getenv`, having not worked with it previously.
 
-- The text for the Home page was taken from the Wikipedia Article A
-- Instructions on how to implement form validation were taken from a [Specific YouTube Tutorial](https://www.youtube.com/)
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
+### Section 2 - ETL
+* For the **Extract** section, I need to give credit to Rory (Code Institute), who gave us the acronym **D**-**I**-**S**-**H** to help with remembering processes.
+* I consulted Claude (Sonnet 5, Anthropic) generative AI to find `pd.Categorical` and the `.set_xticks()` function.
+* The Code Institute LMS examples were extremely helpful, especially when completing the OneHotEncoder section.
+
+### Section 3 - Visualisation
+* The sources I used for assistance in this section:
+    * Stack Overflow - [Changing the tick frequency](https://stackoverflow.com/questions/12608788/changing-the-tick-frequency-on-the-x-or-y-axis)
+    * Stack Overflow - [Convert pandas Series to DataFrame](https://stackoverflow.com/questions/26097916/convert-pandas-series-to-dataframe)
+* Thank you to Vasi (Code Institute) for confirming that I needed to use `pd.crosstab` to compare categorial data in a heatmap.
+* The Code Institute LMS examples were extremely helpful when plotting data visualisations - with more practice, the code will become more second-nature.
 
 ### Media
-
-- The photos used on the home and sign-up page are from This Open-Source site
-- The images used for the gallery page were taken from this other open-source site
-
-
+* The image used in this README.md is from Code Institute
 
 ## Acknowledgements (optional)
 
-* Thank the people who supported this project.
+* Thank you to everyone from the Code Institute team who have been instrumental in my learning up to this point - Vasi, Rory, Mike and Niel.
+* Thanks to my great cohort! 
