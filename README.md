@@ -75,10 +75,26 @@ This is where the practice of data analytics is so valuable: supporting charitie
 
 ## Analysis techniques used
 
-* List the data analysis methods used and explain limitations or alternative approaches.
-* How did you structure the data analysis techniques? Justify your response.
-* Did the data limit you, and did you use an alternative approach to meet these challenges?
-* How did you use generative AI tools to help with ideation, design thinking and code optimisation?
+* **Stage 1 - Anonymisation**
+    * Applied hashing and salting to donor IDs to protect personally identifiable information.
+    * Rationale for doing this first was to separate the process from other steps in ETL, ensuring the sensitive data was kept separate and never committed alongside the working dataset.
+
+* **Stage 2 - ETL**
+    * I cleaned and fixed inconsistent categories.
+    * Extracted new feature columns, `donation_year` and `donation_month` from a datetime column.
+    * Created new labels for donation amounts by applying a function with if/elif/else statements and creating a new `donation_amount_category` column.
+    * I also practiced using OneHotEncoder to encode categorical columns `gender` and `donation_type`.
+
+* **Stage 3 - Visualisation**
+    * Investigated hypotheses using a range of visualisation libraries: Matplotlib, Seaborn and Plotly.
+    * I used descriptive statistics like mean, median, `groupby()` to find the right data to be used in visualisations and analyse hypotheses.
+    * Applied crosstabulation (`pd.crosstab) to examine relationships between categorical variables.
+
+## How did you use generative AI tools to help with ideation, design thinking and code optimisation?
+* I very much wanted to solidify what I'd learned myself when completing this project, so treated AI as an "assistant" to support specific troubleshooting issues or processes I was unfamiliar with. Examples of when I did this are outlined in my project under *"Toubleshoot Issues"* and *"Notes on Process"*.
+* I did find CopPilot's in-line AI support unhelpful at times, because it tended to confuse the code and made it harder for me to visualise what I needed to write. However, I did find it useful in certain instances:
+    * I copied a DataFrame and gave it a new name, requiring me to go through old code cells to ensure I had changed all the names. CoPilot's in-line assistance with identifying all the occasions with the old name were very useful.
+    * I used the inline suggestion when using `os.getenv` in **Stage 1 - Anonymise**
 
 ## Ethical considerations
 
