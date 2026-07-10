@@ -152,7 +152,7 @@ This is where the practice of data analytics is so valuable: supporting charitie
 ### Media
 * The image used in this README.md is from Code Institute
 
-## Acknowledgements (optional)
+## Acknowledgements
 
 * Thank you to everyone from the Code Institute team who have been instrumental in my learning up to this point - Vasi, Rory, Mike and Niel.
 * Thanks to my great cohort! 
