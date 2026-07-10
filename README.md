@@ -34,7 +34,7 @@ This is where the practice of data analytics is so valuable: supporting charitie
 * In the context of this synthetic data, this analysis will serve to support the wildlife conservation charity to know their donors better and understand how they give. This ensures that their fundraising activity can be more targeted and ultimately lead to better ROI on future fundraising activity.
 
 |**Business Requirement**|*(Related Hypothesis)*|Description
-|---|------|
+|---|------|---|
 |**Donation Amount by Age Group**| *(H1)* | Understand which donor segments (by age) generate the most value|
 |**Monthly Donation Patterns**| *(H2)*| Identify patterns in donation volume to support campaign planning|
 |**Payment Method by Country**| *(H3)*| Ensure payment processing setup serves donors effectively while also being efficient|
@@ -139,6 +139,7 @@ This is where the practice of data analytics is so valuable: supporting charitie
 ### Section 2 - ETL
 * For the **Extract** section, I need to give credit to Rory (Code Institute), who gave us the acronym **D**-**I**-**S**-**H** to help with remembering processes.
 * I consulted Claude (Sonnet 5, Anthropic) generative AI to find `pd.Categorical` and the `.set_xticks()` function.
+* In-line with the learning outcomes for this project, I also used Claude (Sonnet 5, Anthropic) generative AI to create a summary of 
 * The Code Institute LMS examples were extremely helpful, especially when completing the OneHotEncoder section.
 
 ### Section 3 - Visualisation
