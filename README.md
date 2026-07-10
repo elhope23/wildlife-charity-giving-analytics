@@ -91,7 +91,7 @@ This is where the practice of data analytics is so valuable: supporting charitie
     * Applied crosstabulation (`pd.crosstab) to examine relationships between categorical variables.
 
 ## How did you use generative AI tools to help with ideation, design thinking and code optimisation?
-* I very much wanted to solidify what I'd learned myself when completing this project, so treated AI as an "assistant" to support specific troubleshooting issues or processes I was unfamiliar with. Examples of when I did this are outlined in my project under *"Toubleshoot Issues"* and *"Notes on Process"*.
+* I very much wanted to solidify what I'd learned myself when completing this project, so treated AI as an "assistant" to support specific troubleshooting issues or processes I was unfamiliar with. Examples of when I did this are outlined in my project under *"Troubleshoot Issues"* and *"Notes on Process"*.
 * I did find CopPilot's in-line AI support unhelpful at times, because it tended to confuse the code and made it harder for me to visualise what I needed to write. However, I did find it useful in certain instances:
     * I copied a DataFrame and gave it a new name, requiring me to go through old code cells to ensure I had changed all the names. CoPilot's in-line assistance with identifying all the occasions with the old name were very useful.
     * I used the inline suggestion when using `os.getenv` in **Stage 1 - Anonymise**
